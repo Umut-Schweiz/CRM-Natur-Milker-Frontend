@@ -1,1 +1,0 @@
-# CRM-Natur-Milker-Frontend
