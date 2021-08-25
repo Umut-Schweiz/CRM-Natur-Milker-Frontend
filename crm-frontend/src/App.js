@@ -9,6 +9,7 @@ import SignUp from './components/pages/SignUp';
 import Clients from './components/pages/Clients';
 import Analytics from './components/pages/Analytics';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Footer from './components/layout/Footer'
 
 
 
@@ -25,6 +26,7 @@ function App() {
       <Route path='/clients' component={Clients} />
       <Route path='/analytics' component={Analytics} />
     </Switch>
+    <Footer/>
   </Router>
   );
 }
