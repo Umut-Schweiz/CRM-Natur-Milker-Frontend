@@ -98,7 +98,7 @@ const Navbar = () => {
                         </Link>
                     </li>
                 </ul>
-                <SignUpButtom />
+                <SignUpButtom className="signup-btn"/>
             </nav>
         </>
     )

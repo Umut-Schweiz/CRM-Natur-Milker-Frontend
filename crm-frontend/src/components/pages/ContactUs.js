@@ -1,45 +1,32 @@
 import React from 'react';
 import "./ContactUs.css";
-import { Container, Row ,  Col , Form  } from 'react-bootstrap';
+import { useState } from 'react';
 
 const ContactUs = () => {
 
+  const [message, setMessage] = useState({ })
+
+  const handleSubmit = (event) => {
+    console.log(message)
+    alert(message);
+    event.preventDefault();
+  }
+
   return (
 
-    <div>
-      <Container fluid="md">
-        <Row>
-          <Col>
-            <Form>
-              <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="name@example.com" />
-              </Form.Group>
-              <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                <Form.Label>Example textarea</Form.Label>
-                <Form.Control as="textarea" rows={3} />
-              </Form.Group>
-            </Form>
-          </Col>
-          <Col>
-            <Form>
-              <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="name@example.com" />
-              </Form.Group>
-              <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                <Form.Label>Example textarea</Form.Label>
-                <Form.Control as="textarea" rows={3} />
-              </Form.Group>
-            </Form>
-          </Col>
-        </Row>
-      </Container>
-
-
+    <div className="contact-us">
+      <form className="contact-form" onSubmit={handleSubmit}>
+        <h2 className="contact-us-titel">CONTACT US</h2>
+        <p className="contact-paragraf" type="Name:"><input className="contact-input" placeholder="Write your name here.." onChange={(e) => setMessage({ ...message, name: e.target.value })}  ></input></p>
+        <p className="contact-paragraf" type="Email:"><input className="contact-input" placeholder="Let us know how to contact you back.." onChange={(e) => setMessage({ ...message, mail: e.target.value })} ></input></p>
+        <p className="contact-paragraf" type="Message:"><textarea className="contact-textarea" placeholder="What would you like to tell us.." onChange={(e) => setMessage({ ...message, messages: e.target.value })} ></textarea></p>
+        <button className="contact-button" submit={handleSubmit} >Send Message</button>
+      </form>
     </div>
 
   )
 }
-
 export default ContactUs
+
+
+
