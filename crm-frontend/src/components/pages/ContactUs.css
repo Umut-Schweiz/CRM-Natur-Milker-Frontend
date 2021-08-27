@@ -71,7 +71,7 @@
   cursor: pointer;
   transition: all 0.3s;
 }
-button:hover {
+.contact-button:hover {
   background: #bcdaae;
   color: rgb(0, 0, 0);
 }
