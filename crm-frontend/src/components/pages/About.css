@@ -1,66 +1,76 @@
-
 .about-body {
-    height: 80vh;
-    background-color: cornsilk;
+  height: 80vh;
+  padding: 25px;
+  background: rgb(22, 36, 0);
+  background: linear-gradient(
+    63deg,
+    rgba(22, 36, 0, 1) 0%,
+    rgb(219, 238, 234) 0%,
+    rgba(53, 196, 105, 1) 0%,
+    rgba(15, 84, 58, 1) 0%,
+    rgb(68, 83, 79) 0%,
+    rgba(211, 236, 206, 1) 24%,
+    rgba(194, 204, 175, 0.149) 50%,
+    rgba(108, 255, 0, 1) 100%
+  );
 }
 
-.about-section{
-    background: url(../../images/Natur\ Milker\ Logo.png) no-repeat left;
-    background-size: 45%;
-    /* background-color: #93be41; */
-    overflow: hidden;
-    padding: 100px 0;
+.about-section {
+  background: url(../../images/Natur\ Milker\ Logo.png) no-repeat left;
+  background-size: 45%;
+  overflow: hidden;
+  padding: 100px 0;
 }
 
-.inner-container{
-    width: 55%;
-    float: right;
-    background-color: #b3cf8d;
-    padding: 150px;
+.inner-container {
+  box-shadow: -10px 12px 32px -2px rgba(0, 138, 48, 0.75);
+  -webkit-box-shadow: -10px 12px 32px -2px rgba(0, 138, 48, 0.75);
+  -moz-box-shadow: -10px 12px 32px -2px rgba(0, 138, 48, 0.75);
+  border-radius: 15px;
+  width: 55%;
+  float: right;
+  background-color: #b3cf8d;
+  padding: 150px;
 }
 
-.inner-container h1{
-    margin-bottom: 30px;
-    font-size: 30px;
-    font-weight: 900;
+.inner-container h1 {
+  margin-bottom: 30px;
+  font-size: 30px;
+  font-weight: 900;
 }
 
-.text{
-    font-size: 13px;
-    color: #545454;
-    line-height: 30px;
-    text-align: justify;
-    margin-bottom: 40px;
+.text {
+  font-size: 13px;
+  color: #545454;
+  line-height: 30px;
+  text-align: justify;
+  margin-bottom: 40px;
 }
 
-.skills{
-    display: flex;
-    justify-content: space-between;
-    font-weight: 700;
-    font-size: 13px;
+.about-read-me-button {
+  position: relative;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: rgb(253, 65, 65);
+  color: #fff;
+  font-size: 18px;
+  height: 45px;
+  width: 140px;
 }
 
-@media screen and (max-width:1200px){
-    .inner-container{
-        padding: 80px;
-    }
+@media screen and (max-width: 1200px) {
+  .inner-container {
+    padding: 80px;
+  }
 }
 
-@media screen and (max-width:1000px){
-    .about-section{
-        background-size: 100%;
-        padding: 100px 40px;
-    }
-    .inner-container{
-        width: 100%;
-    }
-}
-
-@media screen and (max-width:600px){
-    .about-section{
-        padding: 0;
-    }
-    .inner-container{
-        padding: 60px;
-    }
+@media screen and (max-width: 768px) {
+  .about-section {
+    margin-top: 100px;
+    background-size: 100%;
+    padding: 0;
+  }
+  .inner-container {
+    width: 100%;
+  }
 }
