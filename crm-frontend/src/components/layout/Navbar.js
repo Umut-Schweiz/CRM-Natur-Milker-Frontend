@@ -53,27 +53,10 @@ const Navbar = () => {
                             className='nav-links'
                             onClick={closeMobileMenu}
                         >
-                            Clients
+                            My Account
                         </Link>
                     </li>                  
-                    <li className='nav-item'>
-                        <Link
-                            to='/actions'
-                            className='nav-links'
-                            onClick={closeMobileMenu}
-                        >
-                            Actions
-                        </Link>
-                    </li>
-                    <li className='nav-item'>
-                        <Link
-                            to='/analytics'
-                            className='nav-links'
-                            onClick={closeMobileMenu}
-                        >
-                            Analytics
-                        </Link>
-                    </li>
+                  
                     <li
                         className='nav-item'
                         onMouseEnter={onMouseEnter}

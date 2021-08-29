@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="logo-footer">
-                <img src="../images/Natur Milker Logo.png" alt="natur-milker" />
+                <img id="footer-image" src="../images/Natur Milker Logo.png" alt="natur-milker" />
             </div>
 
             <div className="allright-footer">
