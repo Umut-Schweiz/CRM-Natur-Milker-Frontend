@@ -1,5 +1,5 @@
 import React from 'react';
-import './SignUpButtom.css';
+import './SignUpButton.css';
 import { Link } from 'react-router-dom';
 
 const SignUpButton = () => {

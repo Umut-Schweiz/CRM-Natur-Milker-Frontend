@@ -18,14 +18,15 @@
 .about-section {
   background: url(../../images/Natur\ Milker\ Logo.png) no-repeat left;
   background-size: 45%;
+  /* background-color: #93be41; */
   overflow: hidden;
   padding: 100px 0;
 }
 
 .inner-container {
-  box-shadow: -10px 12px 32px -2px rgba(0, 138, 48, 0.75);
-  -webkit-box-shadow: -10px 12px 32px -2px rgba(0, 138, 48, 0.75);
-  -moz-box-shadow: -10px 12px 32px -2px rgba(0, 138, 48, 0.75);
+    box-shadow: -10px 12px 32px -2px rgba(0,138,48,0.75);
+    -webkit-box-shadow: -10px 12px 32px -2px rgba(0,138,48,0.75);
+    -moz-box-shadow: -10px 12px 32px -2px rgba(0,138,48,0.75);
   border-radius: 15px;
   width: 55%;
   float: right;
@@ -67,7 +68,6 @@
 @media screen and (max-width: 768px) {
   .about-section {
     margin-top: 100px;
-    background-size: 100%;
     padding: 0;
   }
   .inner-container {

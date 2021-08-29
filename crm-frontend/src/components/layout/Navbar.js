@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import  SignUpButtom  from './SignUpButtom';
+import  SignUpButton  from './SignUpButton';
+import  LoginButton  from './LoginButton';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import Dropdown from './Dropdown';
@@ -80,8 +81,18 @@ const Navbar = () => {
                             Sign Up
                         </Link>
                     </li>
+                    <li>
+                        <Link
+                            to='/login'
+                            className='nav-links-mobile'
+                            onClick={closeMobileMenu}
+                        >
+                            Login
+                        </Link>
+                    </li>
                 </ul>
-                <SignUpButtom className="signup-btn"/>
+                <SignUpButton className="signup-btn"/>
+                <LoginButton className="login-btn"/>
             </nav>
         </>
     )

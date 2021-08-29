@@ -1,0 +1,59 @@
+#main-login{
+    margin: auto;
+    padding: auto;
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+    background-color: rgb(94, 99, 85);
+    
+}
+
+#login-left {
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    margin-top: 8vh;
+    margin-bottom: 8vh;
+    padding: 2vw;
+    font-size: 1.3vh;
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+}
+
+#login-body-image{
+    width: 30vw;
+    height: 20vh;
+    border-radius: 50px 40px;
+    border: 2px solid rgb(63, 131, 8);
+}
+
+#login-left-body{
+    height: 35vh;
+}
+
+
+#login-body-titel{
+    font-size: 4vh;
+    margin: 3vh 0px 3vh ;
+    color: rgb(219, 211, 211);
+}
+
+#login-body-paragraf{
+    font-size: 1.3vh;
+    color: rgb(219, 211, 211);
+}
+
+#login-footer-paragraf{
+    color: rgb(219, 211, 211);
+}
+
+
+#login-right{
+    border-radius: 25px;
+    width: 40vw;
+    margin-top: 8vh;
+    margin-bottom: 8vh;
+    text-align: center;
+    font-size: 15px;
+    background-color: #f1f1f1;
+}
