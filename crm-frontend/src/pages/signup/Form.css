@@ -1,0 +1,153 @@
+.form-container {
+  box-shadow: 0 5px 8px 0 rgb(251, 255, 249), 0 7px 20px 0 rgb(73, 117, 1);
+  border-radius: 10px;
+  height: 70vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.form-container-main {
+  padding: 15vh;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(
+    63deg,
+    rgba(22, 36, 0, 1) 0%,
+    rgba(10, 113, 25, 1) 0%,
+    rgba(53, 196, 105, 1) 0%,
+    rgba(15, 84, 58, 1) 0%,
+    rgba(12, 100, 77, 1) 0%,
+    rgb(239, 241, 238) 0%,
+    rgba(210, 221, 219, 0.149) 0%,
+    rgb(122, 141, 111) 41%
+  );
+}
+
+.form-content-left {
+  background: linear-gradient(
+    90deg,
+    rgb(140, 199, 32) 0%,
+    rgb(233, 240, 240) 100%
+  );
+  border-radius: 10px 0 0 10px;
+  display: flex;
+  justify-self: center;
+  flex: 50%;
+}
+
+.form-success {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 80px;
+  color: #fff;
+}
+
+.form-content-right {
+  flex: 50%;
+  border-radius: 0 10px 10px 0;
+  background: linear-gradient(90deg, rgb(143, 204, 0) 0%, rgb(49, 47, 47) 100%);
+}
+
+.form-content-right > form {
+  margin: 10vh 5vh 0vh;
+}
+
+.form-img {
+  margin: 15vh 5vh 0vh;
+  width: 25vw;
+  height: 35vh;
+}
+
+.form h1 {
+  font-size: 1rem;
+  text-align: start;
+  width: 80%;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.form-inputs {
+  margin-bottom: 0.5rem;
+  width: 80%;
+}
+
+.form-label {
+  display: inline-block;
+  font-size: 1rem;
+  margin-bottom: 6px;
+  color: #fff;
+}
+
+.form-input {
+  display: block;
+  padding-left: 10px;
+  outline: none;
+  border-radius: 2px;
+  height: 40px;
+  width: 100%;
+  border: none;
+}
+
+.form-input::placeholder {
+  color: #4a6804;
+  font-size: 12px;
+}
+
+.form-input-btn {
+  display: block;
+  width: 80%;
+  height: 50px;
+  margin-top: 10px;
+  border-radius: 2px;
+  background: linear-gradient(
+    90deg,
+    rgb(39, 176, 255) 0%,
+    rgb(0, 232, 236) 100%
+  );
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.form-input-btn:hover {
+  cursor: pointer;
+  background: linear-gradient(
+    90deg,
+    rgb(39, 143, 255) 0%,
+    rgb(12, 99, 250) 100%
+  );
+  transition: all 0.4s ease-out;
+}
+
+.form-input-login {
+  font-size: 0.8rem;
+  margin-top: 10px;
+  color: #fff;
+  width: 80%;
+  text-align: center;
+}
+
+.form-input-login a {
+  text-decoration: none;
+  color: #27cdff;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .form-img {
+    margin: 1vh;
+    width: 75vw;
+    height: 35vh;
+  }
+
+  .form-content-right > form {
+    margin: 5vh;
+  }
+}

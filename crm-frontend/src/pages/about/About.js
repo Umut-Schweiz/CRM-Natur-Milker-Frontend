@@ -1,9 +1,15 @@
 import React from 'react';
 import './About.css';
+import Navbar from '../../components/header/Navbar';
+import Footer from '../../components/footer/Footer';
+
+
 
 const About = () => {
 
     return (
+        <>
+        <Navbar/>
         <div className="about-body">
             <div className="about-section">
                 <div className="inner-container">
@@ -17,6 +23,8 @@ const About = () => {
                 </div>
             </div>
         </div>
+        <Footer/>
+        </>
     )
 }
 

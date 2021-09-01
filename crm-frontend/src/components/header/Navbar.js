@@ -50,7 +50,7 @@ const Navbar = () => {
                     </li>
                     <li className='nav-item'>
                         <Link
-                            to='/clients'
+                            to='/my-account'
                             className='nav-links'
                             onClick={closeMobileMenu}
                         >

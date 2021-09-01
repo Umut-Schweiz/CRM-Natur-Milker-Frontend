@@ -1,22 +1,16 @@
 import React from 'react';
-import Navbar from './components/layout/Navbar';
 import './App.css';
-import Home from './components/pages/Home';
-import About from './components/pages/About';
-import ContactUs from './components/pages/ContactUs';
-import Form from './components/pages/SignUp/Form';
-import Login from './components/pages/Login';
-import MyAccount from './components/pages/MyAccount';
+import Home from './pages/home/Home';
+import About from './pages/about/About';
+import ContactUs from './pages/contactus/ContactUs';
+import Form from './pages/signup/Form';
+import Login from './pages/login/Login';
+import MyAccount from './pages/myaccount/MyAccount';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Footer from './components/layout/Footer'
-
-
-
 
 function App() {
   return (
     <Router>
-    <Navbar />
     <Switch>
       <Route path='/' exact component={Home} />
       <Route path='/about' component={About} />
@@ -25,7 +19,6 @@ function App() {
       <Route path='/login' component={Login} />
       <Route path='/my-account' component={MyAccount} />
     </Switch>
-    <Footer/>
   </Router>
   );
 }
