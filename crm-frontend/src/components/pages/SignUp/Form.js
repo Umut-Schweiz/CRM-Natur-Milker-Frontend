@@ -10,11 +10,13 @@ const Form = () => {
     setIsSubmitted(true);
   }
   return (
-    <>
+    <div className='form-container-main'>
       <div className='form-container'>
-        <span className='close-btn'>×</span>
         <div className='form-content-left'>
+          <span>
           <img className='form-img' src='images/Natur Milker Logo.png' alt='spaceship' />
+          </span>
+        
         </div>
         {!isSubmitted ? (
           <FormSignup submitForm={submitForm} />
@@ -22,7 +24,7 @@ const Form = () => {
           <FormSuccess />
         )}
       </div>
-    </>
+    </div>
   );
 };
 
