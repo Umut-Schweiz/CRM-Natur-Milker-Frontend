@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Form.css';
 import FormSignup from './FormSignUp';
 import FormSuccess from './FormSuccess';
-import Navbar from '../../components/header/Navbar';
+import Navbar from '../../components/navbar/Navbar';
 import Footer from '../../components/footer/Footer';
 
 const Form = () => {

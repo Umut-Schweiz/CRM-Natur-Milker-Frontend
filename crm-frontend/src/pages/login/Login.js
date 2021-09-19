@@ -2,7 +2,7 @@ import React from 'react';
 import "./Login.css"
 import '../../App.css';
 import { Link } from 'react-router-dom';
-import Navbar from '../../components/header/Navbar';
+import Navbar from '../../components/navbar/Navbar';
 import Footer from '../../components/footer/Footer';
 
 const Login = () => {
