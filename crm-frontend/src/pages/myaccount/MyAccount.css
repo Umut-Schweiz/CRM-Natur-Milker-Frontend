@@ -31,16 +31,81 @@
 
 .sidebar-menu li {
     width: 100%;
-    margin-bottom: 1.3rem;
-    padding-left: 2rem;
+    margin-bottom: 1.7rem;
+    padding-left: 1rem;
 }
 
 .sidebar-menu a {
+    padding-left: 1rem;
     display: block;
     color: honeydew;
     font-size: 1.1rem;
 }
 
+.sidebar-menu a.active {
+    background-color: blanchedalmond;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: rgb(32, 54, 9);
+    border-radius: 30px 0px 0px 30px;
+
+}
+
+.sidebar-menu a span:first-child {
+    font-size: 1.5rem;
+    padding-right: 1rem;
+}
+
 .main-content {
     margin-left:345px ;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header h3 {
+    color: #222;
+}
+
+.search-wrapper {
+    border: 1px solid rgb(189, 29, 29);
+    border-radius: 30px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.search-wrapper span {
+    display: inline-block;
+    padding: 0rem 1rem;
+    font-size: 1.5rem;
+   
+}
+
+.search-wrapper input {
+    height: 100%;
+    padding: .5rem;
+    border: none;
+    outline: none;
+}
+
+.user-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.user-wrapper img {
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+
+.user-wrapper small {
+    display: inline-block;
+    color: gray;
 }
