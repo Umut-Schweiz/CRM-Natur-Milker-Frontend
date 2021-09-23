@@ -41,7 +41,7 @@ const MyAccount = () => {
 
       <div className="main-content">
 
-        <header>
+        <header className="my-account-header">
 
           <div className="header-title">
             <h3>
@@ -65,36 +65,212 @@ const MyAccount = () => {
             </div>
           </div>
 
-
         </header>
 
-        <main>
+        <main className="my-account-main">
           <div className="cards">
             <div className="card-single">
               <div>
                 <h1>54</h1>
-                <span>Costumer</span><i class="fas fa-user"></i>
+                <span>Costumers</span>
+              </div>
+
+              <div>
+                <i class="fas fa-user"></i>
               </div>
             </div>
+
             <div className="card-single">
               <div>
                 <h1>54</h1>
-                <span>Projects</span><i class="fas fa-user"></i>
+                <span>Projects</span>
+              </div>
+
+              <div>
+                <i class="fas fa-user"></i>
               </div>
             </div>
+
             <div className="card-single">
               <div>
                 <h1>54</h1>
-                <span>Orders</span><i class="fas fa-user"></i>
+                <span>Orders</span>
+              </div>
+
+              <div>
+                <i class="fas fa-user"></i>
               </div>
             </div>
+
             <div className="card-single">
               <div>
                 <h1>54</h1>
-                <span>Income</span><i class="fas fa-user"></i>
+                <span>Income</span>
+              </div>
+
+              <div>
+                <i class="fas fa-user"></i>
               </div>
             </div>
           </div>
+
+          <div className="recent-grid">
+            <div className="projects">
+              <div className="card">
+                <div className="card-header">
+                  <h3> Recent Projects</h3>
+                  <button>See all <i class="fas fa-user"></i> </button>
+                </div>
+                <div className="card-body">
+                  <div className="table-responsive">
+                  <table className="card-body-table" width="100%">
+                    <thead>
+                      <tr>
+                        <td>Project Title</td>
+                        <td>Department</td>
+                        <td>Status</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>UI/UX Design</td>
+                        <td>UI Team</td>
+                        <td>
+                          <span className="status purple"></span>
+                          review
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Web Devolopment</td>
+                        <td>Web Devolopment Team</td>
+                        <td>
+                          <span className="status pink"></span>
+                          in progress
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Ushop app</td>
+                        <td>Mobile Team</td>
+                        <td>
+                          <span className="status orange"></span>
+                          pending
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>UI/UX Design</td>
+                        <td>UI Team</td>
+                        <td>
+                        <span className="status purple"></span>
+                          review
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Web Devolopment</td>
+                        <td>Web Devolopment Team</td>
+                        <td>
+                        <span className="status pink"></span>
+                          in progress
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Ushop app</td>
+                        <td>Mobile Team</td>
+                        <td>
+                        <span className="status orange"></span>
+                          pending
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            <div className="costumers">
+
+              <div className="card">
+                <div className="card-header">
+                  <h3> New Costumer</h3>
+                  <button>See all <i class="fas fa-user"></i> </button>
+                </div>
+
+                <div className="card-body">
+                  <div className="costumer">
+                    <div className="costumer-card-info">
+                      <img src="./images/img-2.svg" width="40px" height="40px" alt=""></img>
+                      <div>
+                        <h4>Umut Gungor</h4>
+                        <small>CEO EXPERT</small>
+                      </div>
+                    </div>
+                    <div className="costumer-card-contact">
+                    <i class="fas fa-user"></i>
+                    <i class="fas fa-user"></i>
+                    <i class="fas fa-user"></i>
+                    </div>
+                  </div>
+                  <div className="costumer">
+                    <div className="costumer-card-info">
+                      <img src="./images/img-2.svg" width="40px" height="40px" alt=""></img>
+                      <div>
+                        <h4>Umut Gungor</h4>
+                        <small>CEO EXPERT</small>
+                      </div>
+                    </div>
+                    <div className="costumer-card-contact">
+                    <i class="fas fa-user"></i>
+                    <i class="fas fa-user"></i>
+                    <i class="fas fa-user"></i>
+                    </div>
+                  </div>
+                  <div className="costumer">
+                    <div className="costumer-card-info">
+                      <img src="./images/img-2.svg" width="40px" height="40px" alt=""></img>
+                      <div>
+                        <h4>Umut Gungor</h4>
+                        <small>CEO EXPERT</small>
+                      </div>
+                    </div>
+                    <div className="costumer-card-contact">
+                    <i class="fas fa-user"></i>
+                    <i class="fas fa-user"></i>
+                    <i class="fas fa-user"></i>
+                    </div>
+                  </div>
+                  <div className="costumer">
+                    <div className="costumer-card-info">
+                      <img src="./images/img-2.svg" width="40px" height="40px" alt=""></img>
+                      <div>
+                        <h4>Umut Gungor</h4>
+                        <small>CEO EXPERT</small>
+                      </div>
+                    </div>
+                    <div className="costumer-card-contact">
+                    <i class="fas fa-user"></i>
+                    <i class="fas fa-user"></i>
+                    <i class="fas fa-user"></i>
+                    </div>
+                  </div>
+                  <div className="costumer">
+                    <div className="costumer-card-info">
+                      <img src="./images/img-2.svg" width="40px" height="40px" alt=""></img>
+                      <div>
+                        <h4>Umut Gungor</h4>
+                        <small>CEO EXPERT</small>
+                      </div>
+                    </div>
+                    <div className="costumer-card-contact">
+                    <i class="fas fa-user"></i>
+                    <i class="fas fa-user"></i>
+                    <i class="fas fa-user"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </main>
 
       </div>
