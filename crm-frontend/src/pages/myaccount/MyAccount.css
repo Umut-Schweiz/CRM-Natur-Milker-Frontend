@@ -16,6 +16,7 @@
     height:100%;
     background-color: grey;
     z-index: 100;
+    transition: with 300ms;
    
 }
 
@@ -61,11 +62,42 @@
     padding-right: 1rem;
 }
 
+#nav-toggle:checked + .sidebar {
+    width: 70px;
+}
+
+#nav-toggle:checked + .sidebar .sidebar-brand ,
+#nav-toggle:checked + .sidebar li {
+    padding-left: 1rem;
+    text-align: center;
+}
+
+#nav-toggle:checked + .sidebar li a {
+    padding-left: 0rem;
+}
+
+
+#nav-toggle:checked + .sidebar .sidebar-brand h2 span:last-child,
+#nav-toggle:checked + .sidebar .sidebar-menu li a span:last-child{
+    display: none;
+}
+
+#nav-toggle:checked ~ .main-content {
+    margin-left: 70px;
+}
+
+#nav-toggle:checked ~ .main-content .my-account-header {
+    width: calc(100% - 70px);
+    left: 70px;
+}
+
 .main-content {
+    transition: margin-left 300ms;
     margin-left:345px ;
 }
 
 .my-account-header {
+    background: #fff;
     display: flex;
     justify-content: space-between;
     padding: 1rem 1.5rem;
@@ -74,7 +106,12 @@
     left: 345px;
     width: calc(100% - 345px);
     top: 0;
-    z-index: 100; 
+    z-index: 100;
+    transition: left 300ms;
+}
+
+#nav-toggle {
+    display: none;
 }
 
 .my-account-header h3 {
@@ -255,7 +292,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: .5rem 1rem;
+    padding: .5rem .7rem;
 }
 
 .costumer-card-info {
@@ -278,7 +315,7 @@
 }
 
 .costumer-card-info small{
-    font-size: 1.2rem;
+    font-size: .8rem;
 }
 
 .costumer-card-contact i {
@@ -288,3 +325,4 @@
     color: rgb(243, 85, 85);
 
 }
+

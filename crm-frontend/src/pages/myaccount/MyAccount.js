@@ -7,33 +7,34 @@ const MyAccount = () => {
   return (
 
     <>
+      <input type="checkbox" id="nav-toggle"></input>
       <div className="sidebar">
         <div className="sidebar-brand">
-          <h2><i class="fas fa-user"></i><span> NaturMilker</span></h2>
+          <h2><i class="fas fa-user"></i><span>NaturMilker</span></h2>
         </div>
 
         <div className="sidebar-menu">
           <ul>
             <li>
-              <a href="./" className="active"><span><i class="fas fa-user"></i></span>Dashboard </a>
+              <a href="./" className="active"><i class="fas fa-user"></i> <span>Dashboard</span> </a>
             </li>
             <li>
-              <a href="./"> <span><i class="fas fa-user"></i></span>Costumers</a>
+              <a href="./"> <span><i class="fas fa-user"></i></span> <span>Costumers</span></a>
             </li>
             <li>
-              <a href="./"> <span><i class="fas fa-user"></i></span>Projects</a>
+              <a href="./"> <span><i class="fas fa-user"></i></span> <span>Projects</span></a>
             </li>
             <li>
-              <a href="./"> <span><i class="fas fa-user"></i></span>Orders</a>
+              <a href="./"> <span><i class="fas fa-user"></i></span><span>Orders</span></a>
             </li>
             <li>
-              <a href="./"> <span><i class="fas fa-user"></i></span>Inventory</a>
+              <a href="./"> <span><i class="fas fa-user"></i></span><span>Inventory</span></a>
             </li>
             <li>
-              <a href="./"> <span><i class="fas fa-user"></i></span>Accounts</a>
+              <a href="./"> <span><i class="fas fa-user"></i></span><span>Account</span></a>
             </li>
             <li>
-              <a href="./"> <span><i class="fas fa-user"></i></span>Tasks</a>
+              <a href="./"> <span><i class="fas fa-user"></i></span><span>Tasks</span></a>
             </li>
           </ul>
         </div>
@@ -45,7 +46,7 @@ const MyAccount = () => {
 
           <div className="header-title">
             <h3>
-              <label for="">
+              <label for="nav-toggle">
                 <span><i class="fas fa-user"></i></span>
               </label>
               Dashboard
