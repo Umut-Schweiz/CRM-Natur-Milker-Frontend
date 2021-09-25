@@ -323,6 +323,88 @@
     display: inline-block;
     margin-left: 1rem;
     color: rgb(243, 85, 85);
-
 }
 
+@media screen and( max-width: 1200px ) {
+    .sidebar {
+        width: 70px;
+    }
+    
+    .sidebar .sidebar-brand ,
+    .sidebar li {
+        padding-left: 1rem;
+        text-align: center;
+    }
+    
+    .sidebar li a {
+        padding-left: 0rem;
+    }
+    
+    
+    .sidebar .sidebar-brand h2 span:last-child,
+    .sidebar .sidebar-menu li a span:last-child{
+        display: none;
+    }
+    
+    .main-content {
+        margin-left: 70px;
+    }
+    
+    .main-content .my-account-header {
+        width: calc(100% - 70px);
+        left: 70px;
+    }
+
+    .sidebar:hover {
+        width: 345px;
+        z-index: 200;
+    }
+    
+    .sidebar:hover .sidebar-brand ,
+    .sidebar:hover li {
+        padding-left: 2rem;
+        text-align: left;
+    }
+    
+    .sidebar:hover li a {
+        padding-left: 1rem;
+    }
+    
+    
+    .sidebar:hover .sidebar-brand h2 span:last-child,
+    .sidebar:hover .sidebar-menu li a span:last-child{
+        display: inline;
+    }
+}
+
+@media screen and ( max-width: 960px ) {
+
+   
+    .cards {
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+    .recent-grid {
+        grid-template-columns: 50% 45%;
+    }
+}
+@media screen and ( max-width: 768px ) {
+    .cards {
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+    .recent-grid {
+        grid-template-columns: 100%;
+    }
+
+    .search-wrapper {
+        display: none;
+    }
+}
+
+@media screen and ( max-width: 768px ) {
+    .cards {
+        grid-template-columns: 100%;
+    }
+    
+}
