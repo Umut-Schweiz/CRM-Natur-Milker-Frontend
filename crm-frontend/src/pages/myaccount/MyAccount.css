@@ -35,20 +35,21 @@
     margin-top: 1rem;
 }
 
-.sidebar-menu li {
+.sidebar-menu div {
     width: 100%;
     margin-bottom: 1.7rem;
     padding-left: 1rem;
 }
 
-.sidebar-menu a {
+.sidebar-menu-costumer,
+.sidebar-menu-projects {
     padding-left: 1rem;
     display: block;
     color: honeydew;
     font-size: 1.1rem;
 }
 
-.sidebar-menu a.active {
+.sidebar-menu-active {
     background-color: blanchedalmond;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -57,38 +58,9 @@
 
 }
 
-.sidebar-menu a span:first-child {
+.sidebar-menu div:first-child {
     font-size: 1.5rem;
     padding-right: 1rem;
-}
-
-#nav-toggle:checked + .sidebar {
-    width: 70px;
-}
-
-#nav-toggle:checked + .sidebar .sidebar-brand ,
-#nav-toggle:checked + .sidebar li {
-    padding-left: 1rem;
-    text-align: center;
-}
-
-#nav-toggle:checked + .sidebar li a {
-    padding-left: 0rem;
-}
-
-
-#nav-toggle:checked + .sidebar .sidebar-brand h2 span:last-child,
-#nav-toggle:checked + .sidebar .sidebar-menu li a span:last-child{
-    display: none;
-}
-
-#nav-toggle:checked ~ .main-content {
-    margin-left: 70px;
-}
-
-#nav-toggle:checked ~ .main-content .my-account-header {
-    width: calc(100% - 70px);
-    left: 70px;
 }
 
 .main-content {
@@ -203,12 +175,10 @@
     color: #fff;
 }
 
-.recent-grid {
-    margin-top: 3.5rem;
-    display: grid;
-    grid-gap: 2rem;
-    grid-template-columns: 65% auto;
+.content-table {
+    margin-top: 150px;
 }
+
 .card {
     background: #fff;
     border-radius: 5px;

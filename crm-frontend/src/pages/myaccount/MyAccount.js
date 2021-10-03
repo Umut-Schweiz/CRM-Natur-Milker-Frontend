@@ -1,8 +1,27 @@
 import React from 'react';
 import "./MyAccount.css"
-
+import MyCostumers from './MyCostumers';
+import MyProjects from './MyProjects';
+import { useState } from 'react';
 
 const MyAccount = () => {
+
+  const [costumers, setCostumers] = useState(false)
+  const [projects, setProjects] = useState(false)
+
+  const showCostumers = () => {
+    if (costumers === false) {
+      setCostumers(true)
+      setProjects(false)
+    }
+  }
+
+  const showProjects = () => {
+    if (projects === false) {
+      setProjects(true)
+      setCostumers(false)
+    }
+  }
 
   return (
 
@@ -13,30 +32,11 @@ const MyAccount = () => {
           <h2><i class="fas fa-user"></i><span>NaturMilker</span></h2>
         </div>
 
-        <div className="sidebar-menu">
-          <ul>
-            <li>
-              <a href="./" className="active"><i class="fas fa-user"></i> <span>Dashboard</span> </a>
-            </li>
-            <li>
-              <a href="./"> <span><i class="fas fa-user"></i></span> <span>Costumers</span></a>
-            </li>
-            <li>
-              <a href="./"> <span><i class="fas fa-user"></i></span> <span>Projects</span></a>
-            </li>
-            <li>
-              <a href="./"> <span><i class="fas fa-user"></i></span><span>Orders</span></a>
-            </li>
-            <li>
-              <a href="./"> <span><i class="fas fa-user"></i></span><span>Inventory</span></a>
-            </li>
-            <li>
-              <a href="./"> <span><i class="fas fa-user"></i></span><span>Account</span></a>
-            </li>
-            <li>
-              <a href="./"> <span><i class="fas fa-user"></i></span><span>Tasks</span></a>
-            </li>
-          </ul>
+        <div className="sidebar-menu">            
+            <div ><i class="fas fa-user"></i> Dashboard</div>
+            <div className={costumers ? 'sidebar-menu-active' : 'sidebar-menu-costumer'} onClick={showCostumers}><i class="fas fa-user"></i>Costumers</div>
+            <div className={projects ? 'sidebar-menu-active' : 'sidebar-menu-projects'}onClick={showProjects}><i class="fas fa-user"></i>Projects</div>
+      
         </div>
       </div>
 
@@ -61,7 +61,7 @@ const MyAccount = () => {
             <img src="./images/img-3.svg" width="40px" height="40px" alt="account-holder"></img>
             <div>
               <h4>Natur Gangs</h4>
-              <small>Super Admin</small>
+              <small>Log Out</small>
 
             </div>
           </div>
@@ -75,7 +75,6 @@ const MyAccount = () => {
                 <h1>54</h1>
                 <span>Costumers</span>
               </div>
-
               <div>
                 <i class="fas fa-user"></i>
               </div>
@@ -114,162 +113,9 @@ const MyAccount = () => {
               </div>
             </div>
           </div>
-
-          <div className="recent-grid">
-            <div className="projects">
-              <div className="card">
-                <div className="card-header">
-                  <h3> Recent Projects</h3>
-                  <button>See all <i class="fas fa-user"></i> </button>
-                </div>
-                <div className="card-body">
-                  <div className="table-responsive">
-                  <table className="card-body-table" width="100%">
-                    <thead>
-                      <tr>
-                        <td>Project Title</td>
-                        <td>Department</td>
-                        <td>Status</td>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>UI/UX Design</td>
-                        <td>UI Team</td>
-                        <td>
-                          <span className="status purple"></span>
-                          review
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Web Devolopment</td>
-                        <td>Web Devolopment Team</td>
-                        <td>
-                          <span className="status pink"></span>
-                          in progress
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Ushop app</td>
-                        <td>Mobile Team</td>
-                        <td>
-                          <span className="status orange"></span>
-                          pending
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>UI/UX Design</td>
-                        <td>UI Team</td>
-                        <td>
-                        <span className="status purple"></span>
-                          review
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Web Devolopment</td>
-                        <td>Web Devolopment Team</td>
-                        <td>
-                        <span className="status pink"></span>
-                          in progress
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Ushop app</td>
-                        <td>Mobile Team</td>
-                        <td>
-                        <span className="status orange"></span>
-                          pending
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  </div>
-                  
-                </div>
-              </div>
-            </div>
-            <div className="costumers">
-
-              <div className="card">
-                <div className="card-header">
-                  <h3> New Costumer</h3>
-                  <button>See all <i class="fas fa-user"></i> </button>
-                </div>
-
-                <div className="card-body">
-                  <div className="costumer">
-                    <div className="costumer-card-info">
-                      <img src="./images/img-2.svg" width="40px" height="40px" alt=""></img>
-                      <div>
-                        <h4>Umut Gungor</h4>
-                        <small>CEO EXPERT</small>
-                      </div>
-                    </div>
-                    <div className="costumer-card-contact">
-                    <i class="fas fa-user"></i>
-                    <i class="fas fa-user"></i>
-                    <i class="fas fa-user"></i>
-                    </div>
-                  </div>
-                  <div className="costumer">
-                    <div className="costumer-card-info">
-                      <img src="./images/img-2.svg" width="40px" height="40px" alt=""></img>
-                      <div>
-                        <h4>Umut Gungor</h4>
-                        <small>CEO EXPERT</small>
-                      </div>
-                    </div>
-                    <div className="costumer-card-contact">
-                    <i class="fas fa-user"></i>
-                    <i class="fas fa-user"></i>
-                    <i class="fas fa-user"></i>
-                    </div>
-                  </div>
-                  <div className="costumer">
-                    <div className="costumer-card-info">
-                      <img src="./images/img-2.svg" width="40px" height="40px" alt=""></img>
-                      <div>
-                        <h4>Umut Gungor</h4>
-                        <small>CEO EXPERT</small>
-                      </div>
-                    </div>
-                    <div className="costumer-card-contact">
-                    <i class="fas fa-user"></i>
-                    <i class="fas fa-user"></i>
-                    <i class="fas fa-user"></i>
-                    </div>
-                  </div>
-                  <div className="costumer">
-                    <div className="costumer-card-info">
-                      <img src="./images/img-2.svg" width="40px" height="40px" alt=""></img>
-                      <div>
-                        <h4>Umut Gungor</h4>
-                        <small>CEO EXPERT</small>
-                      </div>
-                    </div>
-                    <div className="costumer-card-contact">
-                    <i class="fas fa-user"></i>
-                    <i class="fas fa-user"></i>
-                    <i class="fas fa-user"></i>
-                    </div>
-                  </div>
-                  <div className="costumer">
-                    <div className="costumer-card-info">
-                      <img src="./images/img-2.svg" width="40px" height="40px" alt=""></img>
-                      <div>
-                        <h4>Umut Gungor</h4>
-                        <small>CEO EXPERT</small>
-                      </div>
-                    </div>
-                    <div className="costumer-card-contact">
-                    <i class="fas fa-user"></i>
-                    <i class="fas fa-user"></i>
-                    <i class="fas fa-user"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className="content-table">
+            {costumers ? <MyCostumers /> : ""}
+            {projects ? <MyProjects /> : ""}
           </div>
 
         </main>
