@@ -1,8 +1,10 @@
 import React from 'react';
 import "./MyAccount.css"
-import MyCostumers from './MyCostumers';
+import MyCostumers from './MyCustomers';
 import MyProjects from './MyProjects';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 
 const MyAccount = () => {
 
@@ -26,17 +28,20 @@ const MyAccount = () => {
   return (
 
     <>
-      <input type="checkbox" id="nav-toggle"></input>
+      
       <div className="sidebar">
         <div className="sidebar-brand">
-          <h2><i class="fas fa-user"></i><span>NaturMilker</span></h2>
+          <h1><span>NaturMilker</span></h1>
+          <div ><i class="fas fa-user-circle fa-3x"></i><h2>My Account</h2></div>
         </div>
 
         <div className="sidebar-menu">            
-            <div ><i class="fas fa-user"></i> Dashboard</div>
-            <div className={costumers ? 'sidebar-menu-active' : 'sidebar-menu-costumer'} onClick={showCostumers}><i class="fas fa-user"></i>Costumers</div>
-            <div className={projects ? 'sidebar-menu-active' : 'sidebar-menu-projects'}onClick={showProjects}><i class="fas fa-user"></i>Projects</div>
-      
+            <div className={costumers ? 'sidebar-menu-active' : 'sidebar-menu-costumer'} onClick={showCostumers}><i class="fas fa-users fa-lg"></i>Customers</div>
+            <div className={projects ? 'sidebar-menu-active' : 'sidebar-menu-projects'}onClick={showProjects}><i class="fas fa-tasks fa-lg"></i>Projects</div>
+        </div>
+
+        <div>
+            Footer
         </div>
       </div>
 
@@ -46,14 +51,14 @@ const MyAccount = () => {
 
           <div className="header-title">
             <h3>
-              <label for="nav-toggle">
-                <span><i class="fas fa-user"></i></span>
-              </label>
-              Dashboard
+              <Link to="/">
+              <span><i class="fas fa-home fa-2x"></i></span>
+              Home
+              </Link>
             </h3>
           </div>
           <div className="search-wrapper" >
-            <span><i class="fas fa-user"></i></span>
+            <span><i class="fas fa-search-plus fa-lg"></i></span>
             <input type="search" placeholder="Search here"></input>
           </div>
 
@@ -62,32 +67,21 @@ const MyAccount = () => {
             <div>
               <h4>Natur Gangs</h4>
               <small>Log Out</small>
-
             </div>
           </div>
 
         </header>
 
         <main className="my-account-main">
+
           <div className="cards">
             <div className="card-single">
               <div>
                 <h1>54</h1>
-                <span>Costumers</span>
+                <span>Customers</span>
               </div>
               <div>
-                <i class="fas fa-user"></i>
-              </div>
-            </div>
-
-            <div className="card-single">
-              <div>
-                <h1>54</h1>
-                <span>Projects</span>
-              </div>
-
-              <div>
-                <i class="fas fa-user"></i>
+                <i class="fas fa-users fa-3x"></i>
               </div>
             </div>
 
@@ -98,7 +92,17 @@ const MyAccount = () => {
               </div>
 
               <div>
-                <i class="fas fa-user"></i>
+                <i class="fas fa-sort-amount-up-alt fa-3x"></i>
+              </div>
+            </div>
+
+            <div className="card-single">
+              <div>
+                <h1>54</h1>
+                <span>My Account-Settings</span>
+              </div>
+              <div>
+              <i class="fas fa-user-cog fa-3x"></i>
               </div>
             </div>
 
@@ -109,7 +113,7 @@ const MyAccount = () => {
               </div>
 
               <div>
-                <i class="fas fa-user"></i>
+                <i class="fas fa-comments-dollar fa-3x"></i>
               </div>
             </div>
           </div>

@@ -4,12 +4,11 @@ const MyProjects = () => {
 
   return (
     
-    
             <div className="projects">
               <div className="card">
                 <div className="card-header">
                   <h3> Recent Projects</h3>
-                  <button>See all <i class="fas fa-user"></i> </button>
+                  <button>See all <i class="far fa-eye"></i> </button>
                 </div>
                 <div className="card-body">
                   <div className="table-responsive">
@@ -18,7 +17,7 @@ const MyProjects = () => {
                       <tr>
                         <td>Project Title</td>
                         <td>Department</td>
-                        <td>Status</td>
+                        <td>Income</td>
                       </tr>
                     </thead>
                     <tbody>
