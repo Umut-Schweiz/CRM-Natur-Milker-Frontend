@@ -1,11 +1,42 @@
-import React from 'react';
+import React, { useState, useRef } from "react";
 import "./Login.css"
 import '../../App.css';
 import { Link } from 'react-router-dom';
 import Navbar from '../../components/navbar/Navbar';
 import Footer from '../../components/footer/Footer';
+import AuthService from '../../services/auth'
 
-const Login = () => {
+
+const Login = (props) => {
+
+  const form = useRef();
+
+
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+ 
+  const onChangeUsername = (e) => {
+    const username = e.target.value;
+    setUsername(username);
+  };
+
+  const onChangePassword = (e) => {
+    const password = e.target.value;
+    setPassword(password);
+  };
+  
+  console.log(username + password)
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+
+    AuthService.login(username, password).then( () => {
+        props.history.push("/myaccount");
+        window.location.reload();
+      }
+    );
+
+  };
 
   return (
 
@@ -27,13 +58,14 @@ const Login = () => {
           <div id="main-login-right">
             <h1>Login</h1>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-            <form className="container-login" >
+            <form className="container-login" onSubmit={handleLogin} ref={form} >
               <p>
                 <label className="w3-text-brown"><strong>User Name</strong></label><br />
-                <input className="w3-input w3-border w3-sand" name="first" type="text" /></p>
+                <input className="w3-input w3-border w3-sand" type="text" name="username"  value={username}  onChange={onChangeUsername}/>
+              </p>
               <p>
                 <label className="w3-text-brown"><strong>Password</strong></label><br />
-                <input className="w3-input w3-border w3-sand" name="last" type="text" /></p>
+                <input className="w3-input w3-border w3-sand" type="text" name="password"  value={password}  onChange={onChangePassword}/></p>
               <p>
                 <button className="w3-btn w3-brown">Login</button></p>
 
