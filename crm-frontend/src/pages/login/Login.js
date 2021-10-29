@@ -76,7 +76,7 @@ const Login = (props) => {
                   SignUp
                 </Link></p>
               </div>
-
+              
             </form>
           </div>
 

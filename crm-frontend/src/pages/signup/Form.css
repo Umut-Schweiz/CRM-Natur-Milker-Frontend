@@ -52,6 +52,11 @@
   margin: 10vh 5vh 0vh;
 }
 
+#success-image {
+  width: 30vw;
+  height: 45vh;
+}
+
 .form-img {
   margin: 15vh 5vh 0vh;
   width: 25vw;
