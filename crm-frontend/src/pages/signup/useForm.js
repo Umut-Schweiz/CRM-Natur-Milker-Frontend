@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react';
+import validate from './validateInfo';
+import authService from '../../services/auth';
 
-const useForm = (callback, validate) => {
+const useForm = ({submitForm}) => {
+
+
   const [values, setValues] = useState({
     username: '',
     email: '',
@@ -9,7 +13,8 @@ const useForm = (callback, validate) => {
   });
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
-
+  
+ 
   const handleChange = e => {
     const { name, value } = e.target;
     setValues({
@@ -23,12 +28,14 @@ const useForm = (callback, validate) => {
 
     setErrors(validate(values));
     setIsSubmitting(true);
+    
   };
 
-  useEffect(
-    () => {
+  useEffect( () => {
       if (Object.keys(errors).length === 0 && isSubmitting) {
-        callback();
+        authService.register(values)
+        submitForm()
+        
       }
     },
     [errors]
