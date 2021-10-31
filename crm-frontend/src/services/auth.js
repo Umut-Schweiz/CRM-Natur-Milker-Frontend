@@ -2,13 +2,6 @@ import axios from "axios";
 
 const API_URL = "http://localhost:8080/api/auth/";
 
-
-const deneme = (username, email, password , password2) => {
-
-  console.log("deneme" , username, email, password , password2)
-
-};
-
 const register = (username, email, password , password2) => {
   console.log(username)
   return axios.post(API_URL + "signup", {
@@ -47,7 +40,6 @@ const exportedObjets = {
   login,
   logout,
   getCurrentUser,
-  deneme,
 };
 
 export default exportedObjets;

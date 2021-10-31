@@ -7,7 +7,7 @@
     106deg,
     rgba(22, 36, 0, 1) 0%,
     rgba(9, 121, 103, 0.14889705882352944) 18%,
-    rgba(0, 255, 55, 1) 100%
+    rgb(3, 141, 33) 100%
   ) !important;
 }
 
@@ -36,7 +36,7 @@
   height: 10vh;
   padding: 10px;
   box-sizing: border-box;
-  background-color: #a9b9a9;
+  background-color: #f4f8f4;
   outline: none;
   resize: none;
   transition: all 0.3s;
@@ -46,7 +46,7 @@
   width: 100%;
   padding: 10px;
   box-sizing: border-box;
-  background-color: #a9b9a9;
+  background-color: #f4f8f4;
   outline: none;
   resize: none;
   transition: all 0.3s;

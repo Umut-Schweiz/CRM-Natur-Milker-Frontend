@@ -25,7 +25,7 @@ const Login = (props) => {
     setPassword(password);
   };
   
-  console.log(username + password)
+ 
 
   const handleLogin = (e) => {
     e.preventDefault();

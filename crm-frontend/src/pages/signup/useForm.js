@@ -4,7 +4,6 @@ import authService from '../../services/auth';
 
 const useForm = ({submitForm}) => {
 
-
   const [values, setValues] = useState({
     username: '',
     email: '',

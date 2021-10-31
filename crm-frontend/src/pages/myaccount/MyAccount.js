@@ -5,8 +5,12 @@ import MyProjects from './MyProjects';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+import AuthService from '../../services/auth'
+
 
 const MyAccount = () => {
+  
+  const currentUser = AuthService.getCurrentUser();
 
   const [costumers, setCostumers] = useState(false)
   const [projects, setProjects] = useState(false)
@@ -40,9 +44,6 @@ const MyAccount = () => {
             <div className={projects ? 'sidebar-menu-active' : 'sidebar-menu-projects'}onClick={showProjects}><i class="fas fa-tasks fa-lg"></i>Projects</div>
         </div>
 
-        <div>
-            Footer
-        </div>
       </div>
 
       <div className="main-content">
